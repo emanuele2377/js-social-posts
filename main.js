@@ -43,7 +43,6 @@ for (let i = 0; i < posts.length; i++) {
 }
 
 
-
 posts.forEach((item, i, array) => {
 
 	let contenuto = `
@@ -82,4 +81,12 @@ posts.forEach((item, i, array) => {
 	document.getElementById("container").innerHTML += contenuto;
 });
 
-console.log(posts);
+let immagini = document.getElementsByClassName("post");
+
+if (posts > 0) {
+    posts++;
+
+    immagini[posts].classList.add("successiva");
+
+}
+ console.log(posts)
